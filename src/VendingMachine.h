@@ -24,6 +24,13 @@ public:
      * 
      */
     void displayMenu();
+
+    /**
+     * @brief Update currently selected drink from user input
+     * 
+     * @param selection character represents selected drink
+     */
+    void selectDrink(char selection);
 private:
     /**
      * @brief an enum class represents types of drink 

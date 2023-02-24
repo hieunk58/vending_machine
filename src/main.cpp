@@ -16,5 +16,11 @@ int main(int argc, char const *argv[])
 {
     webfleet::VendingMachine machine;
     machine.displayMenu();
+
+    char selection;
+    std::cin >> selection;
+
+    machine.selectDrink(selection);
+    
     return 0;
 }
