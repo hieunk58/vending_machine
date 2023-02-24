@@ -31,6 +31,13 @@ public:
      * @param selection character represents selected drink
      */
     void selectDrink(char selection);
+
+    /**
+     * @brief Update balance when user inserts money
+     * 
+     * @param amount the amount of money user inserts
+     */
+    void insertMoney(int amount);
 private:
     /**
      * @brief an enum class represents types of drink 

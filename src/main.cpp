@@ -21,6 +21,10 @@ int main(int argc, char const *argv[])
     std::cin >> selection;
 
     machine.selectDrink(selection);
-    
+
+    int amount;
+    std::cin >> amount;
+    machine.insertMoney(amount);
+
     return 0;
 }
