@@ -8,11 +8,13 @@
  * @copyright Copyright (c) 2023
  * 
  */
-
 #include <iostream>
+
+#include "VendingMachine.h"
 
 int main(int argc, char const *argv[])
 {
-    std::cout << "Hello World\n";
+    webfleet::VendingMachine machine;
+    machine.displayMenu();
     return 0;
 }

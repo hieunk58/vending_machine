@@ -12,11 +12,18 @@
 #ifndef VENDING_MACHINE_H_
 #define VENDING_MACHINE_H_
 
+#include <iostream>
+
 namespace webfleet {
 class VendingMachine {
 public:
     VendingMachine() : m_balance(0), m_selectedDrink(DrinkType::NONE) {}
-    
+
+    /**
+     * @brief Display menu of drink to users
+     * 
+     */
+    void displayMenu();
 private:
     /**
      * @brief an enum class represents types of drink 
