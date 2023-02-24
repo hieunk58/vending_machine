@@ -10,7 +10,7 @@
  */
 #include <iostream>
 
-#include "VendingMachine.h"
+#include "vending_machine.h"
 
 int main(int argc, char const *argv[])
 {
@@ -25,6 +25,8 @@ int main(int argc, char const *argv[])
     int amount;
     std::cin >> amount;
     machine.insertMoney(amount);
+
+    machine.completeTransaction();
 
     return 0;
 }

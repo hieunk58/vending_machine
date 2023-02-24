@@ -1,5 +1,5 @@
 /**
- * @file VendingMachine.h
+ * @file vending_machine.h
  * @author Hieu Nguyen
  * @brief 
  * @version 0.1
@@ -38,6 +38,12 @@ public:
      * @param amount the amount of money user inserts
      */
     void insertMoney(int amount);
+
+    /**
+     * @brief Dispense drink and return changes (if any)
+     * 
+     */
+    void completeTransaction();
 private:
     /**
      * @brief an enum class represents types of drink 
@@ -50,6 +56,8 @@ private:
         LEMONADE=2,    /**< Lemonade */
         WATER=3        /**< Water */
     };
+
+    static constexpr int common_price = 2;
 
     int m_balance; /**< total amount of inserted money */
     DrinkType m_selectedDrink; /**< currently selected drink */

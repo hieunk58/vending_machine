@@ -1,4 +1,14 @@
-#include "VendingMachine.h"
+/**
+ * @file vending_machine.cpp
+ * @author Hieu Nguyen
+ * @brief 
+ * @version 0.1
+ * @date 2023-02-24
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+#include "vending_machine.h"
 
 namespace webfleet
 {
@@ -46,5 +56,18 @@ void VendingMachine::insertMoney(int amount) {
         std::cout << "Invalid amount of money\n";
         break;
     }
+}
+
+void VendingMachine::completeTransaction() {
+    // dispense drink
+    std::cout << "Dispensing your selected drink!\n";
+    // return any change
+    int changeMoney = m_balance - VendingMachine::common_price;
+    if (changeMoney > 0) {
+        std::cout << "Return " << changeMoney << "€ in change\n";
+    }
+    // update balance and currently selected drink
+    m_balance = 0;
+    m_selectedDrink = DrinkType::NONE;
 }
 } // namespace webfleet
