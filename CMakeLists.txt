@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/build/bin")
 
 option(ENABLE_UTEST "Enable unit tests" OFF)
-option(ENABLE_DOXYDOC "Generate doxygen document" OFF)
+option(ENABLE_DOXYDOC "Generate doxygen document" ON)
 
 add_subdirectory(src)
 
