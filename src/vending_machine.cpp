@@ -70,4 +70,16 @@ void VendingMachine::completeTransaction() {
     m_balance = 0;
     m_selectedDrink = DrinkType::NONE;
 }
+
+void VendingMachine::cancelTransaction() {
+    // user inserted some money but want to cancel
+    if (m_balance > 0) {
+        std::cout << "Transaction was cancelled. Return " << m_balance << "€\n";
+        m_balance = 0;
+        m_selectedDrink = DrinkType::NONE;
+    } else
+    {
+        std::cout << "There is no transaction to cancel!\n";
+    }
+}
 } // namespace webfleet

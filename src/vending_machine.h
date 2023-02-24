@@ -44,6 +44,13 @@ public:
      * 
      */
     void completeTransaction();
+
+    /**
+     * @brief Cancel transaction when user presses 'x'
+     * return any inserted money
+     * 
+     */
+    void cancelTransaction();
 private:
     /**
      * @brief an enum class represents types of drink 
@@ -57,7 +64,7 @@ private:
         WATER=3        /**< Water */
     };
 
-    static constexpr int common_price = 2;
+    static constexpr int common_price = 2; /**< common price for all types of drink */
 
     int m_balance; /**< total amount of inserted money */
     DrinkType m_selectedDrink; /**< currently selected drink */

@@ -22,11 +22,16 @@ int main(int argc, char const *argv[])
 
     machine.selectDrink(selection);
 
+    std::cout << "Now insert money. We only accept 1€, 2€, 5€ and 10€!\n";
     int amount;
     std::cin >> amount;
     machine.insertMoney(amount);
+    // test cancel transaction
+    machine.cancelTransaction();
 
-    machine.completeTransaction();
+
+    // machine.completeTransaction();
+
 
     return 0;
 }
