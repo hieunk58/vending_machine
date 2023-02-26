@@ -29,16 +29,35 @@ public:
         WATER=3        /**< Water */
     };
 
+    /**
+     * @brief Construct a new Vending Machine object
+     * 
+     */
     VendingMachine() : m_balance(0), m_selectedDrink(DrinkType::NONE) {}
 
+    /**
+     * @brief Get the Balance
+     * 
+     * @return int 
+     */
     int getBalance() const {
         return m_balance;
     }
 
+    /**
+     * @brief Get the currently selected drink
+     * 
+     * @return DrinkType the type of drink: none, cola, lemonade and water
+     */
     DrinkType getSelectedDrink() const {
         return m_selectedDrink;
     }
 
+    /**
+     * @brief Get the Common Price
+     * 
+     * @return int the price of drink
+     */
     static int getCommonPrice() {
         return common_price;
     }
@@ -108,7 +127,7 @@ public:
      */
     void runMachine();
 private:
-    static constexpr int common_price = 2; /**< common price for all types of drink */
+    static const int common_price = 2; /**< common price for all types of drink */
     int m_balance; /**< total amount of inserted money */
     DrinkType m_selectedDrink; /**< currently selected drink */
 };

@@ -4,4 +4,3 @@ set(SRC_FILES
 )
 
 add_executable(vending_machine ${SRC_FILES})
-add_library(vending_machine_lib STATIC ${SRC_FILES})
