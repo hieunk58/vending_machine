@@ -17,7 +17,31 @@
 namespace webfleet {
 class VendingMachine {
 public:
+    /**
+     * @brief an enum class represents types of drink 
+     * that vending machine offers
+     * 
+     */
+    enum class DrinkType {
+        NONE=0,        /**< Not a drink */
+        COLA=1,        /**< Cola */
+        LEMONADE=2,    /**< Lemonade */
+        WATER=3        /**< Water */
+    };
+
     VendingMachine() : m_balance(0), m_selectedDrink(DrinkType::NONE) {}
+
+    int getBalance() const {
+        return m_balance;
+    }
+
+    DrinkType getSelectedDrink() const {
+        return m_selectedDrink;
+    }
+
+    static int getCommonPrice() {
+        return common_price;
+    }
 
     /**
      * @brief Display menu of drink to users
@@ -84,20 +108,7 @@ public:
      */
     void runMachine();
 private:
-    /**
-     * @brief an enum class represents types of drink 
-     * that vending machine offers
-     * 
-     */
-    enum class DrinkType {
-        NONE=0,        /**< Not a drink */
-        COLA=1,        /**< Cola */
-        LEMONADE=2,    /**< Lemonade */
-        WATER=3        /**< Water */
-    };
-
     static constexpr int common_price = 2; /**< common price for all types of drink */
-
     int m_balance; /**< total amount of inserted money */
     DrinkType m_selectedDrink; /**< currently selected drink */
 };

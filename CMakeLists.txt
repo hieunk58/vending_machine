@@ -5,8 +5,10 @@ project(VendingMachine)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/build/bin")
 
-option(ENABLE_UTEST "Enable unit tests" OFF)
+option(ENABLE_UTEST "Enable unit tests" ON)
 option(ENABLE_DOXYDOC "Generate doxygen document" ON)
+
+include_directories(src)
 
 add_subdirectory(src)
 

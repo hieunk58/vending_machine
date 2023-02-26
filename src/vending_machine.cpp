@@ -84,11 +84,12 @@ bool VendingMachine::dispenseDrink() {
 bool VendingMachine::returnMoney(int amount) {
     bool result = true;
 
-    if (result) {
+    if (amount) {
         std::cout << "Return " << amount << "€\n";
     } else {
         std::cout << "Oops! Something went wrong\nPlease contact our "
                     "customer service\n";
+        result = false;
     }
 
     return result;
