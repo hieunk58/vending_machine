@@ -15,23 +15,7 @@
 int main(int argc, char const *argv[])
 {
     webfleet::VendingMachine machine;
-    machine.displayMenu();
-
-    char selection;
-    std::cin >> selection;
-
-    machine.selectDrink(selection);
-
-    std::cout << "Now insert money. We only accept 1€, 2€, 5€ and 10€!\n";
-    int amount;
-    std::cin >> amount;
-    machine.insertMoney(amount);
-    // test cancel transaction
-    machine.cancelTransaction();
-
-
-    // machine.completeTransaction();
-
-
+    machine.runMachine();
+    
     return 0;
 }

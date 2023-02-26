@@ -29,18 +29,37 @@ public:
      * @brief Update currently selected drink from user input
      * 
      * @param selection character represents selected drink
+     * @return true user selects valid type of drink
+     * @return false user selects invalid type of drink
      */
-    void selectDrink(char selection);
+    bool selectDrink(char selection);
 
     /**
      * @brief Update balance when user inserts money
      * 
      * @param amount the amount of money user inserts
+     * @return true insert valid money successfully
+     * @return false insert invalid money
      */
-    void insertMoney(int amount);
+    bool insertMoney(int amount);
 
     /**
-     * @brief Dispense drink and return changes (if any)
+     * @brief Dispense drink
+     * @return true if successful
+     * @return false if failed
+     */
+    bool dispenseDrink();
+
+    /**
+     * @brief Return money to user
+     * 
+     * @param amount the amount of money to return
+     */
+    bool returnMoney(int amount);
+
+    /**
+     * @brief Calculate change money and return to user (if any),
+     * reset balance and selected drink
      * 
      */
     void completeTransaction();
@@ -48,9 +67,22 @@ public:
     /**
      * @brief Cancel transaction when user presses 'x'
      * return any inserted money
+     * reset balance and selected drink
      * 
      */
     void cancelTransaction();
+
+    /**
+     * @brief Reset m_balance to 0 and m_selectedDrink to NONE
+     * 
+     */
+    void reset();
+
+    /**
+     * @brief start running vending machine
+     * 
+     */
+    void runMachine();
 private:
     /**
      * @brief an enum class represents types of drink 
