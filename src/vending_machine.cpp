@@ -139,6 +139,14 @@ void VendingMachine::runMachine() {
             std::cout << "\nPlease insert money: ";
             std::cin >> money;
 
+            // user enters character, not number
+            if(std::cin.fail()) {
+                std::cin.clear();
+                std::cin.ignore();               
+                cancelTransaction();
+                break;
+            }
+
             // unsupported money
             if (!insertMoney(money)) {
                 cancelTransaction();
