@@ -151,8 +151,8 @@ void VendingMachine::runMachine() {
                 continue;
             }
 
-            // confirm payment
-            std::cout << "\nConfirm your payment\n"
+            // confirm order
+            std::cout << "\nConfirm your order\n"
                       << "Press 'y' to proceed or 'x' to cancel\n";
             std::cout << "Your selection: ";
             char confirm;

@@ -38,7 +38,7 @@ public:
     /**
      * @brief Get the Balance
      * 
-     * @return int 
+     * @return int current balance
      */
     int getBalance() const {
         return m_balance;
